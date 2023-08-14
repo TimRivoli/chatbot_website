@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head> 
+    <title>Chat Interface</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div id="chat-container">
+        <div id="buttons-container">
+            <div>
+			<label for="aggregate-questions">Aggregate questions:</label>
+            <input type="checkbox" id="aggregate-questions" />
+            </div>
+            <div>           
+			<button id="clear-button">Clear</button>
+            <button id="copy-button">Copy</button>
+			</div>
+        </div>
+		<div id="aggregate-questions-container">
+        </div>
+        <div id="chat-box"></div>
+        <div id="user-input-container">
+            <input type="text" id="user-input" placeholder="Type a message..." />
+            <button id="send-button">Send</button>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
