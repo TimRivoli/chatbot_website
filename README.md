@@ -2,4 +2,4 @@
 Simple chat website using OpenAI GPT backend.
 
 Requirements:
-pip install flash, openai
+pip install flask, openai
