@@ -3,9 +3,9 @@ import openai, constants
 
 app = Flask(__name__)
 openai.api_key = constants.openai_api_key
-question_history = []
+question_history = []  #keeps track of previous questions, the API doesn't remember prior questions asked, the aggregate-questions checkbox will submit all your prior questions with each question
 
-def ask_chatgpt(question:str, system_command:str = "", model:str = 'gpt-3.5-turbo', temperature:float=.2, max_tokens:int=1200):
+def ask_chatgpt(question:str, system_command:str = "", model:str = 'gpt-3.5-turbo', temperature:float=.1, max_tokens:int=1200):
 	openai.api_key = constants.openai_api_key
 	messages = []
 	if system_command !="": messages.append({"role": "system", "content": system_command})
