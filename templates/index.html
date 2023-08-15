@@ -1,26 +1,43 @@
 <!DOCTYPE html>
 <html>
 <head> 
-    <title>Chat Interface</title>
+    <title>Chat Interface Demonstrating OpenAI API Usage</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
     <div id="chat-container">
         <div id="buttons-container">
             <div>
-			<label for="aggregate-questions">Aggregate questions:</label>
-            <input type="checkbox" id="aggregate-questions" />
-            </div>
+				<label for="response-size">Response size:</label>
+				<select id="response-size"> <option value="small">Small</option><option selected value="medium">Medium</option><option value="large">Large</option><option value="verylarge">Very Large</option></select>
+				<label for="temperature">Creativity:</label>
+				<select id="temperature">		
+					<option value=0> 0 - Uninspired </option>
+					<option value=1> 1 - Straight Laced </option>
+					<option value=2 selected> 2 - Ordinary </option>
+					<option value=3> 3 - Average </option>
+					<option value=4> 4 - Imaginative </option>
+					<option value=5> 5 - Innovative </option>
+					<option value=6> 6 - Resourceful </option>
+					<option value=7> 7 - Artistic </option>
+					<option value=8> 8 - Inventive </option>
+					<option value=9> 9 - Genius </option>
+					<option value=10> 10 - Tipsy </option>
+				</select>
+				<label for="conversation-mode">Conversation mode:</label>
+				<input type="checkbox" id="conversation-mode" />
+            </div>			
             <div>           
-			<button id="clear-button">Clear</button>
-            <button id="copy-button">Copy</button>
+				<button id="clear-button">Clear</button>
+				<button id="copy-button">Copy</button>
 			</div>
         </div>
-		<div id="aggregate-questions-container">
-        </div>
+		<div id="user-input-containerx">
+			<input type="text" id="user-instructions" placeholder="Custom instructions for model..." />
+		</div>
         <div id="chat-box"></div>
         <div id="user-input-container">
-            <input type="text" id="user-input" placeholder="Type a message..." />
+            <input type="text" id="user-input" placeholder="Begin your conversation here..." />
             <button id="send-button">Send</button>
         </div>
     </div>
