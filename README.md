@@ -1,7 +1,7 @@
 # chatbot_website
 ## ✅ Requirements:
-pip install flask, openai, tiktoken, uuid
-get an API token from OpenAI
+-pip install flask, openai, tiktoken, uuid
+-get an API token from OpenAI
 
 ## 📚 Description
 My sample Chat website using OpenAI GPT backend.  This has become an interesting study in managing conversation history to balance cost, performance, and model comprehension.  The GPT model has zero memory of your prior conversation, so to simulate memory the developer must collect the conversation history (both the user questions and the model responses) and post the whole thing to the model at each turn.  That quickly becomes cumbersome and it confuses the model.
