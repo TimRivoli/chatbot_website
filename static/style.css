@@ -35,12 +35,27 @@ label { padding: 5px;}
     margin-bottom: 10px;
 }
 
-.bot-message {
+.conversation-title {
+    background-color: #dff0d8;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+	font-size: 16px;
+	font-weight: bold;
+	width: 100%;
+	display: flex;
+	align-items: center;
+}
+
+.bot-message, .conversation-summary, pre{
     background-color: #d9edf7;
     padding: 10px;
     border-radius: 10px;
     margin-bottom: 10px;
     text-align: left;
+	text-indent: 0px;
+	white-space: pre-wrap;
+	word-wrap: break-word;
 }
 
 #user-input-container {
@@ -56,6 +71,8 @@ label { padding: 5px;}
     border: 1px solid #ccc;
     border-radius: 5px;
 }
+.big-input { width: 100%; }
+
 #user-instructions {width:100%}
 
 #buttons-container {
@@ -64,8 +81,9 @@ label { padding: 5px;}
 	justify-content: space-between;
 }
 
-#send-button,#clear-button,#copy-button {
-    background-color: #007bff;
+.button {
+    margin-left: 5px;
+	background-color: #007bff;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -73,4 +91,18 @@ label { padding: 5px;}
     cursor: pointer;
 }
 
+.visible{ display: inline-block; }
+.hidden { display: none; }
+
+#UserName {
+    padding: 10px;
+    font-size: 14px;
+    border: none;
+    background-color: #f9f9f9;
+}
+
+.conversation-container {
+	padding: 10px;
+	margin: 10px;
+}
 
